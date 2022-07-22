@@ -17,7 +17,7 @@ describe("NewerRandom", function () {
     const [owner, otherAccount] = await ethers.getSigners();
 
     const NewerRandom = await ethers.getContractFactory("newerRandom");
-    const NR = await NewerRandom.deploy();
+    const NR = await NewerRandom.deploy(1, 100);
 
     return { owner, otherAccount, NR };
   }
@@ -26,7 +26,7 @@ describe("NewerRandom", function () {
     let testObj = {};
     for (let i = 0; i < 100; i++) {
       await NR.connect(owner).getNextRandom();
-      let genNumber = await NR.generatedNumber();
+      let genNumber = await NR.lastGeneratedNumber();
       expect(genNumber).to.be.lte(100);
       expect(genNumber).to.be.gte(1);
       expect(testObj[genNumber]).to.be.eq(undefined);

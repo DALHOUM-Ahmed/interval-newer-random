@@ -35,6 +35,41 @@
       "artifacts": [
         "newerRandom"
       ]
+    },
+    "/home/ahmed/Desktop/projects/brainAndBrain/interval-newer-random/contracts/randomGenerator.sol": {
+      "lastModificationDate": 1658476279956,
+      "contentHash": "a2f8f5700df1a4a176e82f2aebf4e315",
+      "sourceName": "contracts/randomGenerator.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.0 <0.9.0"
+      ],
+      "artifacts": [
+        "newerRandom"
+      ]
     }
   }
 }
